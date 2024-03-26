@@ -43,7 +43,9 @@ function getPokemonDesc() {
         
             const char = data.descriptions[7].description;
             pokeDescription.innerText = char;
-    });
+    }).catch(error => {
+        pokeDescription.innerText = "Nenhuma descrição encontrada"
+    })
 }
 
 
